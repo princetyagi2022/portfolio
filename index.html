@@ -4,8 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <link rel="stylesheet" href="portfolio.css">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<style>
+  /* Fullscreen Particle Background */
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0; /* Changed from -1 to 0 */
+    pointer-events: none; /* Allow clicks to pass through */
+  }
+  main, section, .container, .resume-card, .home__container {
+    position: relative;
+    z-index: 1;
+  }
+</style>
+
 </head>
 <body>
 <! --================Background Animation =============-->
@@ -15,7 +34,9 @@
        <div class="wave"></div>
        <div class="wave"></div>
     </div> -->
-  
+  <!-- Tech Particle Background -->
+<div id="particles-js"></div>
+
   
 <!--=============== MAIN ===============-->
 <main class="main">
@@ -36,17 +57,17 @@
 
     <!--=============== ABOUT ===============-->
     <section class="about section" id="about">
-        <h2 class="section__title">About Me</h2>
+        <h2 class="section__title" >About Me</h2>
         <div class="about__container container grid">
             <div class="side_by_side">
             <div class="about__data">
                 <p class="about__description">Welcome to my portfolio! I’m Prince Tyagi, a passionate creator dedicated to showcasing my work and sharing my journey. Here, you'll find a collection of my projects, skills, and experiences that reflect my commitment to excellence.</p>
-                <img src="resume_img.jpg" alt="" class="about__img">
+                <img src="resume_img2.png" alt="" class="about__img">
             </div>    
                 <div class="about__info">
                     <div>
                         <span class="about__info-title">01+</span>
-                        <span class="about__info-name">Years <br> experience</span>
+                        <span class="about__info-name">Years <br>Self Experience</span>
                     </div>
                     <div>
                         <span class="about__info-title">02+</span>
@@ -57,7 +78,7 @@
                         <span class="about__info-name">Responsive<br>Clone</span>
                     </div>
                 </div>
-                <a href="Prince_Tyagi_Resume1 (1).pdf" class="button" download>Download CV</a>
+                <a href="Prince_Tyagi_Resume_Up1.pdf" class="button" download>Download CV</a>
             </div>
            -
         </div>
@@ -89,101 +110,60 @@
       </section>
 ​
     <!--=============== SKILLS ===============-->
-    <section class="skills section" id="skills">
-        <h2 class="section__title">Skills</h2>
-        <div class="skills__container container grid">
-            <div class="skills__content">
-                <h3 class="skills__title">Frontend</h3>
-                <div class="skills__box">
-                    <div class="skills__group">
-                        <div class="skills__data">
-                            <i class='bx bx-badge-check'></i>
-                            <div>
-                                <h3 class="skills__name">HTML</h3>
-                                <span class="skills__level">Advanced</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <i class='bx bx-badge-check'></i>
-                            <div>
-                                <h3 class="skills__name">CSS</h3>
-                                <span class="skills__level">Advanced</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skills__group">
-                        <div class="skills__data">
-                            <i class='bx bx-badge-check'></i>
-                            <div>
-                                <h3 class="skills__name">JavaScript</h3>
-                                <span class="skills__level">Intermediate</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <i class='bx bx-badge-check'></i>
-                            <div>
-                                <h3 class="skills__name">React</h3>
-                                <span class="skills__level">Intermediate</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="skills__content">
-                <h3 class="skills__title">Backend</h3>
-                <div class="skills__box">
-                    <div class="skills__group">
-                        <div class="skills__data">
-                            <i class='bx bx-badge-check'></i>
-                            <div>
-                                <h3 class="skills__name">Node.js</h3>
-                                <span class="skills__level">Intermediate</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <i class='bx bx-badge-check'></i>
-                            <div>
-                                <h3 class="skills__name">Python</h3>
-                                <span class="skills__level">Advanced</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skills__group">
-                        <div class="skills__data">
-                            <i class='bx bx-badge-check'></i>
-                            <div>
-                                <h3 class="skills__name">SQL</h3>
-                                <span class="skills__level">Advanced</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <i class='bx bx-badge-check'></i>
-                            <div>
-                                <h3 class="skills__name">Flask</h3>
-                                <span class="skills__level">Intermediate</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+     <!-- skills section starts -->
+  <section class="skills" id="skills">
+
+    <h2 class="heading"><center><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</center></span></h2>
+
+    <div class="container">
+      <div class="row" id="skillsContainer">
+
+        <!-- <div class="bar">
+              <div class="info">
+                <img src="https://img.icons8.com/color/48/000000/adobe-xd.png"/>
+                <span>AdobeXD</span>
+              </div>
+            </div> -->
+
+      </div>
+    </div>
+  </section>
 ​
     <!--=============== SERVICES ===============-->
     <section class="services section" id="services">
-        <h2 class="section__title">Services</h2>
-        <div class="services__container container grid">
-            <div class="services__card">
-                <h3 class="services__title">Web Development</h3>
-                <p class="services__description">Creating responsive and functional websites.</p>
-            </div>
-            <div class="services__card">
-                <h3 class="services__title">UI/UX Design</h3>
-                <p class="services__description">Designing user-friendly interfaces and experiences.</p>
-            </div>
-            
-        </div>
-    </section>
+  <h2 class="section__title">Services</h2>
+  <div class="services__container container grid">
+    
+    <!-- Full Stack Web Development -->
+    <div class="services__card">
+      <i class="fas fa-code"></i>
+      <h3 class="services__title">Full Stack Development</h3>
+      <p class="services__description">
+        Building end-to-end web applications using frontend & backend technologies.
+      </p>
+    </div>
+
+    <!-- Web Development -->
+    <div class="services__card">
+      <i class="fas fa-laptop-code"></i>
+      <h3 class="services__title">Web Development</h3>
+      <p class="services__description">
+        Creating responsive and functional websites.
+      </p>
+    </div>
+
+    <!-- UI/UX Design -->
+    <div class="services__card">
+      <i class="fas fa-pencil-ruler"></i>
+      <h3 class="services__title">UI/UX Design</h3>
+      <p class="services__description">
+        Designing user-friendly interfaces and experiences.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 ​
     <!--=============== WORK ===============-->
     <section class="work section" id="work">
@@ -204,7 +184,7 @@
         </div>
         <div class="card" style="--clr:#03a9f4;">
             <div class="imgBox">
-                <img style="z-index: 1;" src="Loginpage.png" alt="">
+                <img style="z-index: 1;" src="bank_img2.jpeg" alt="">
             </div>
             <div class="contant">
                 <center><h3>Banking Transaction System</h3></center>
@@ -303,6 +283,75 @@
         </div>
     </section>
 </main>
+<script>
+  async function fetchData(type = "skills") {
+      let response;
+      if (type === "skills") {
+          response = await fetch("skills.json"); // Update path if needed
+      } else {
+          response = await fetch("./projects/projects.json");
+      }
+      const data = await response.json();
+      return data;
+  }
+
+  function showSkills(skills) {
+      let skillsContainer = document.getElementById("skillsContainer");
+      let skillHTML = "";
+      skills.forEach(skill => {
+          skillHTML += `
+          <div class="bar">
+                <div class="info">
+                  <img src="${skill.icon}" alt="skill" />
+                  <span>${skill.name}</span>
+                </div>
+          </div>`;
+      });
+      skillsContainer.innerHTML = skillHTML;
+  }
+
+  // Call it on page load
+  window.addEventListener("DOMContentLoaded", async () => {
+      const skills = await fetchData("skills");
+      showSkills(skills);
+  });
+</script>
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 70, density: { enable: true, value_area: 800 } },
+    color: { value: "#00ffcc" },
+    shape: { type: "circle" },
+    opacity: { value: 0.4 },
+    size: { value: 3 },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#00ffff",
+      opacity: 0.4,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 2
+    }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: { enable: true, mode: "grab" },
+      onclick: { enable: true, mode: "push" }
+    },
+    modes: {
+      grab: { distance: 200, line_linked: { opacity: 0.6 } },
+      push: { particles_nb: 4 }
+    }
+  },
+  retina_detect: true
+});
+</script>
+
+
 ​
 </body>
 </html>
