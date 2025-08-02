@@ -4,16 +4,6 @@
     padding: 0;
   }
   
-  body {
-    font-family: 'Open Sans', sans-serif;
-    /* background: linear-gradient(to right, #d63ef4, #ff7a85); */
-    animation: circule;
-    animation-duration: auto;
-    animation-duration: 7s;
-    animation-iteration-count: infinite;
-  }
-  
-
 body {
   margin: auto;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -29,18 +19,6 @@ body {
   color: #00ffd5;
   text-shadow: 0 0 5px #00ffd5, 0 0 10px #00ffd5;
 }
-
-/* @keyframes gradient {
-  0% {
-      background-position: 0% 0%;
-  }
-  50% {
-      background-position: 100% 100%;
-  }
-  100% {
-      background-position: 0% 0%;
-  }
-} */
 
 
   
